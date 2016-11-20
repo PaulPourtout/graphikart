@@ -1,16 +1,18 @@
 body {
     font-family: sans-serif;
     margin: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
 }
 
 #scroll-score {
-   position: fixed;
-   top: 90px;
-   left: 50px;
-   background-color: #fff;
-   height: 100px;
-   width: 150px;
-   z-index: 100;
+    position: fixed;
+    top: 90px;
+    left: 50px;
+    background-color: #fff;
+    height: 100px;
+    width: 150px;
+    z-index: 100;
 }
 
 a {
@@ -22,9 +24,9 @@ strong {
 }
 
 #main-nav-container {
-   position: fixed;
-   width: 100%;
-   z-index: 100;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
 }
 
 #main-nav {
@@ -105,6 +107,10 @@ header {
     background-color: #2998CD;
     color: #fff;
     padding: 180px 0 150px 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 header a {
@@ -134,7 +140,63 @@ header a:hover {
     display: flex;
     flex-direction: column;
     max-width: 500px;
-    margin-left: 85px;
+    z-index: 50;
+}
+
+header .computer-pict {
+    background: url("../img/laptop.svg");
+    height: 200px;
+    width: 370px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin: 0;
+    z-index: 50;
+}
+
+.cloud {
+    position: absolute;
+    z-index: 0;
+    left: 100%;
+    opacity: 1;
+    animation: clouds 30s infinite linear;
+    -moz-animation: clouds 30s infinite linear;
+    -webkit-animation: clouds 30s infinite linear;
+}
+
+@keyframes clouds {
+   0%, 100% {
+      left: 100%;
+      opacity: 1;
+   }
+
+   90% {
+      left: 0%;
+      opacity: 1;
+   }
+
+   91% {
+      left: 0%;
+      opacity: 0;
+   }
+
+   95% {
+      left: 100%;
+      opacity: 0;
+   }
+}
+
+.cloud01 {
+top: 110px;
+}
+
+.cloud02 {
+animation-delay: 4s;
+top: 160px;
+}
+
+.cloud03 {
+   top: 350px;
+   animation-delay: 7s;
 }
 
 .horizontal-container {
@@ -334,7 +396,7 @@ header a:hover {
 }
 
 .section2 .list-container>li:not(:first-of-type):hover {
-   background-color: rgb(245, 245, 245);
+    background-color: rgb(245, 245, 245);
 }
 
 .section2 .list-container .last-course>li:nth-child(1) {
